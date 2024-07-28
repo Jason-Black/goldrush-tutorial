@@ -7,10 +7,12 @@ import { GoldRushProvider,
   AddressActivityList  } from "@covalenthq/goldrush-kit";
 import "@covalenthq/goldrush-kit/styles.css";
 
+console.log('Environment variables:', process.env);
+
 
 function App() {
   return (
-    <GoldRushProvider apikey={ProcessingInstruction.env.REACT_APP_COVALENT_API2}  >
+    <GoldRushProvider apikey={process.env.REACT_APP_COVALENT_API}  >
            <TokenBalancesList
                     chain_names={[
                         "eth-mainnet",
